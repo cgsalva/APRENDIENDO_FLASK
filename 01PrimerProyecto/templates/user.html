@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>User</title>
+</head>
+<body>
+	<form method="POST" action="">
+		<input type="text" name="nombre" placeholder="Ingresa tu nombre">
+		<button type="submit">Enviar</button>
+	</form>
+	{% if nombre %}
+		{% if nombre == 'Salva' %}
+		<h1>Hola {{nombre}} (Usuario espacial)</h1>
+		{% else %}
+		<h1>Hola {{nombre}}</h1>
+		{% endif %}
+	{% else %}
+	<h2>Aqui aparecera tu nombre</h2>
+	{% endif %}
+</body>
+</html>
